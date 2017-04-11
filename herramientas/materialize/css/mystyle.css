@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "caviar";
+  src: local(CaviarDreams), url("../fonts/CaviarDreams.ttf");
+  font-weight: 500;
+  }
+
+body{
+	font-family: caviar;
+}
+
+.rounder{
+	border-radius: 40px;
+}
+
+.top-space{
+	margin-top: 20vh;
+}
+
+div.modal a{
+	margin-bottom: 20vh;
+}
+
+.my-button{
+	margin-top: 15px;
+}
