@@ -34,23 +34,11 @@
 					<label for="cedula_cliente">
 					</label>
 				</div>
-				<div class="input-field col s6">
-					<p>
-					Es un:
-					<input class="with-gap" name="tipo_animal" type="radio" id="gato" value="2" />
-					<label for="gato">gato</label>
-					<input class="with-gap" name="tipo_animal" type="radio" id="perro" value="1" />
-					<label for="perro">perro</label>
-					</p>
-				</div>
+				Seleccione raza
 				  <div class="input-field col s12">
-				    <select id="select-raza">
-				      <option value="" disabled selected>Choose your option</option>
-				      <option value="1">Option 1</option>
-				      <option value="2">Option 2</option>
-				      <option value="3">Option 3</option>
+				    <select id="raza" name="raza" class="browser-default">
+				      <option value="" >Seleccione</option>
 				    </select>
-				    <label>Materialize Select</label>
 				  </div>
 			</div>
 			<div class="col s12">
@@ -67,11 +55,9 @@
   	<script type="text/javascript">
    	$(document).ready(function() {
 		$('.modal').modal();
-    	$('#select-raza').material_select();
+    	$('#raza').material_select();
      });
-
   	</script>
-	<script type="text/javascript" src="../controladores/validationmascota.js"></script>
 	<script type="text/javascript" src="../controladores/razas.js"></script>
 
 	
