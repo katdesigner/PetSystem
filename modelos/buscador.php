@@ -20,11 +20,8 @@ $query = "SELECT usuarios.nombre, mascotas.nombre FROM usuarios INNER JOIN masco
 if(isset($_POST['mascota']))
 {
 	$q=$conexion->real_escape_string($_POST['mascota']);
-	$query = "SELECT usuarios, mascotas WHERE 
-		nombre LIKE '%".$q."%'";
+	$query = "SELECT usuarios.nombre, mascotas.nombre FROM usuarios INNER JOIN mascotas on mascotas.usuarios_id = usuarios.id WHERE usuarios.nombre OR mascotas.nombre WHERE LIKE '%".$q."%'";
 }
-
-
 
 $primera=$conexion->query($query);
 if ($primera->num_rows > 0)
