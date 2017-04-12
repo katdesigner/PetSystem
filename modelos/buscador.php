@@ -2,7 +2,7 @@
 
 /////// CONEXIÓN A LA BASE DE DATOS /////////
 $host = 'localhost';
-$basededatos = 'clinica_veterinaria';
+$basededatos = 'tercera';
 $usuario = 'root';
 $contraseña = '';
 
@@ -13,31 +13,35 @@ if ($conexion -> connect_errno)
 }
 
 $tabla="";
-$query="SELECT nombre FROM mascota";
+
+
+$query = "SELECT usuarios.nombre, mascotas.nombre FROM usuarios INNER JOIN mascotas on mascotas.usuarios_id = usuarios.id";
 
 if(isset($_POST['mascota']))
 {
 	$q=$conexion->real_escape_string($_POST['mascota']);
-	$query="SELECT * FROM mascota WHERE 
+	$query = "SELECT usuarios, mascotas WHERE 
 		nombre LIKE '%".$q."%'";
 }
 
-$buscarMascota=$conexion->query($query);
-if ($buscarMascota->num_rows > 0)
+
+
+$primera=$conexion->query($query);
+if ($primera->num_rows > 0)
 {
 	$tabla.= 
 	'<table class="table">
 		<tr class="bg-primary">
-			<td>Nombre</td>
-			<td>Estado</td>
+			<td>Dueño</td>
+			<td>Mascota</td>
 		</tr>';
 
-	while($filaMascota= $buscarMascota->fetch_assoc())
+	while($filaPrimera = mysqli_fetch_array($primera))
 	{
 		$tabla.=
 		'<tr>
-			<td>'.$filaMascota['nombre'].'</td>
-			<td>    -Activo</td>
+			<td>'.$filaPrimera[0].'</td>
+			<td>'.$filaPrimera[1].'</td>
 		 </tr>
 		';
 	}

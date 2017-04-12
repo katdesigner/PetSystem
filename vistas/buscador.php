@@ -16,7 +16,7 @@
 <br>
 <a class="btn btn-floating pulse blue  lighten-1" href="../index.php"><i class="material-icons">home</i></a>
 
-	<h3>Buscar mascota</h3>
+	<h3>Buscar consulta</h3>
 	<section>
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar...">
 		</section>
