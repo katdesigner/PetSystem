@@ -5,10 +5,20 @@
 	$tipo_raza = $_POST['raza'];
 	$cedula_cliente = $_POST['cedula_cliente'];
 
+	/*
+
+	$verificar_nombre = mysqli_query($conexion, "SELECT nombre FROM macotas WHERE nombre = '$nombre_mascota'");
+
+	if (mysqli_num_rows($verificar_nombre) > 0) {
+		echo"Ya existe el nombre. Use otro porque así es el ejercicio";
+		#enviar a registro_cliente.html
+		exit;
+	}
+*/
 
 	$verificar_usuario = mysqli_query($conexion, "SELECT * FROM usuarios WHERE cedula = '$cedula_cliente'");
 
-	if (mysqli_num_rows($verificar_usuario) < 1) {
+	if (mysqli_num_rows($verificar_usuario) == 0) {
 		echo"No existe el usuario";
 		#enviar a registro_cliente.html
 		exit;

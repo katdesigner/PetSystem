@@ -13,25 +13,31 @@
 </head>
 <body style="background-color: <?php print  $_COOKIE["color"]; ?>">
 <div class="container">
+	<center>
 
     <div class="row">
 		<div class="valign-wrapper blue  lighten-1 s12 m8 rounder z-depth-2 top-space">
 		  <h1 class="valign center-align white-text">Bienvenido a Clínica Pets, la mejor opción de cuidados para tus mascotas</h1>
-		</div>
-		<center style="margin-top: 80px;">
-		<a class="btn amber darken-4 " href="vistas/registro_cliente.php">Registrar cliente</a>
-		<a class="btn amber darken-4" href="vistas/registro_veterinario.php">Registrar veterinario</a>
-		<a class="btn amber darken-4 " href="vistas/registro_mascota.php">Registrar mascota</a>
-		<a class="btn amber darken-4 " href="vistas/registro_raza.php">Registrar raza</a>
-		<a class="btn amber darken-4 " href="vistas/registro_consulta.php">Registrar consulta</a>
-		<a class="btn blue darken-4 " href="vistas/buscador.php">Buscar consultas</a>
-		</center>
+		 </div>
 	</div>
+	<div class="row">
+				<a class="btn amber darken-4  " href="vistas/registro_cliente.php">Registrar cliente</a>
+				<a class="btn amber darken-4 " href="vistas/registro_veterinario.php">Registrar veterinario</a>
+				<a class="btn amber darken-4 " href="vistas/registro_mascota.php">Registrar mascota</a>
+	</div>
+	<div class="row">
+				<a class="btn amber darken-4 s12 m6" href="vistas/registro_raza.php">Registrar raza</a>
+				<a class="btn amber darken-4 s12 m6" href="vistas/registro_consulta.php">Registrar consulta</a>
 
+	</div>
+	<div class="row">
+				<a class="btn blue darken-4 col push-s2 s8" href="vistas/buscador.php">Buscar consultas</a>
+	</div>
 </div>
+</center>
 
 <center>
-<a href="#modal2" class="btn white grey-text">Cambiar color de fondo</a>
+<a href="#modal2" class="btn white black-text">Cambiar color de fondo</a>
 </center>
 
 <div id="modal2" class="modal row">

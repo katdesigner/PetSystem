@@ -19,16 +19,10 @@
 	<h3>Bienvenido al registro de consultas</h3>
 
 	<div class="row">
-		<form class="col s12" action="../modelos/registro_mascota.php" method="POST" id="petform">
+		<form class="col s12" action="../modelos/registro_consulta.php" method="POST" id="petform">
 			<div class="row">
 				<h5>Registra una consulta</h5>
-				<div class="input-field col s12">
-				Cédula del dueño
-					<input id="cedula" name="cedula" type="number" class="validate">
-					<label for="cedula">
-					</label>
-				</div>
-
+				
 				<div class="input-field col s12"><!--Acá se deben cargar las mascotas segpún la cédula ingresada por el usuario, se debe ejecutar tomando la cédula del usuario ONKEYUP -->
 				Seleccione mascota
 				  <div class="input-field col s12">
